@@ -135,11 +135,7 @@
     //get database connection config
     require_once('./config/config.php');
     // Establishes the connection
-    $conn = sqlsrv_connect($databaseConfig['serverName'], array(
-        'Database' => $databaseConfig['database'],
-        'Uid' => $databaseConfig['username'],
-        'PWD' => $databaseConfig['password'],
-    )
+    $conn = sqlsrv_connect($configString
     );
 
     // Check the connection

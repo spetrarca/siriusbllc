@@ -6,4 +6,10 @@ $databaseConfig = array(
     'username' => $_ENV['AZURE_SQL_UID'],
     'password' => $_ENV['AZURE_SQL_PWD'],
 );
+
+$configString = $databaseConfig['serverName'], array(
+    'Database' => $databaseConfig['database'],
+    'Uid' => $databaseConfig['username'],
+    'PWD' => $databaseConfig['password'],
+);
 ?>
