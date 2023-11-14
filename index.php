@@ -129,6 +129,8 @@
     </div>
 
     </div>
+    
+    
     <?php
     //get database connection config
     require_once('./config/config.php');
