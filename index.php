@@ -8,18 +8,24 @@
 
 <body>
     <?php
-    $host = $_ENV['AZURE_SQL_SERVERNAME'];
-    $database = $_ENV['AZURE_SQL_DATABASE'];
-    $username = $_ENV['AZURE_SQL_UID'];
-    $password = $_ENV['AZURE_SQL_PWD'];
-    
-    try {
-        $conn = new PDO('AzureSQL:host=$host;dbname=$database', $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Comnected successfully";
-    } catch (PDOException $e) {
-        echo "". $e->getMessage() ."";
+    $serverName = $_ENV['AZURE_SQL_SERVERNAME'];
+    $connectionOptions = array(
+        'Database' => $_ENV['AZURE_SQL_DATABASE'],
+        'Uid' => $_ENV['AZURE_SQL_UID'],
+        'PWD' => $_ENV['AZURE_SQL_PWD'],
+    );
+
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
+
+    if ($conn) {
+        echo "Connected successfully";
+    } else {
+        echo
+            "Connection failed: " . sqlsrv_errors();
     }
+
+    sqlsrv_close($conn);
+
     ?>
 
 
