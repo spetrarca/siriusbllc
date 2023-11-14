@@ -138,7 +138,7 @@
     if ($conn) {
         echo "Connected successfully";
     } else {
-        echo "Connection failed: " . sqlsrv_errors();
+        echo "Connection failed: " . print_r(sqlsrv_errors());
     }
 
     // Close the connection
