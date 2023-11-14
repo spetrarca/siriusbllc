@@ -126,7 +126,9 @@
         <div class="col"></div>
         <div class="col"></div>
     </div>
+    </div>
 
+    </div>
     <?php
     //get database connection config
     require_once('./config/config.php');
@@ -136,15 +138,13 @@
     } else {
         echo "Connection failed: " . sqlsrv_errors();
     }
-    
+
     // Close the connection
     sqlsrv_close($conn);
     ?>
-    <!--
-    </div>
 
-    </div>
--->
+
+
 
 
 

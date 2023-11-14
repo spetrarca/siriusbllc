@@ -1,7 +1,7 @@
 <?php
 
-$serverName = $_ENV['AZURE_SQL_SERVERNAME'];
-$connectionOptions = array(
+$databaseConfig = array(
+    'serverName' => $_ENV['AZURE_SQL_SERVERNAME'],
     'Database' => $_ENV['AZURE_SQL_DATABASE'],
     'Uid' => $_ENV['AZURE_SQL_UID'],
     'PWD' => $_ENV['AZURE_SQL_PWD'],
