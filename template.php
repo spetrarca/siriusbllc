@@ -76,6 +76,24 @@
     <?php
     //get database connection config
     require_once('./config/config.php');
+    // Establishes the connection
+    $conn = sqlsrv_connect($databaseConfig['serverName'], array(
+        'Database' => $databaseConfig['database'],
+        'Uid' => $databaseConfig['username'],
+        'PWD' => $databaseConfig['password'],
+    )
+    );
+
+    // Check the connection
+    if ($conn) {
+        echo "Connected successfully";
+    } else {
+        echo "Connection failed: ";
+        print_r(sqlsrv_errors());
+    }
+
+    // Close the connection
+    sqlsrv_close($conn);
     ?>
 
     <!--footer starts here-->
