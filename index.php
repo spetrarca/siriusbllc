@@ -130,6 +130,7 @@
     <?php
     //get database connection config
     require_once('./config/config.php');
+    $conn = sqlsrv_connect($databaseConfig['serverName'], $databaseConfig);
     if ($conn) {
         echo "Connected successfully";
     } else {
