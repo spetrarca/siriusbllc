@@ -128,25 +128,16 @@
     </div>
 
     <?php
-    
-    $serverName = $_ENV['AZURE_SQL_SERVERNAME'];
-    $connectionOptions = array(
-        'Database' => $_ENV['AZURE_SQL_DATABASE'],
-        'Uid' => $_ENV['AZURE_SQL_UID'],
-        'PWD' => $_ENV['AZURE_SQL_PWD'],
-    );
-
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
-
+    //get database connection config
+    require_once('./config/config.php');
     if ($conn) {
         echo "Connected successfully";
     } else {
-        echo
-            "Connection failed: " . sqlsrv_errors();
+        echo "Connection failed: " . sqlsrv_errors();
     }
-
-    sqlsrv_close($conn);
     
+    // Close the connection
+    sqlsrv_close($conn);
     ?>
     <!--
     </div>
