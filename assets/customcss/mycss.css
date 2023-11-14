@@ -1,0 +1,11 @@
+.custom-hover-style:hover {
+    background-color: blue;
+    color: white;
+}
+.img-fluid {
+    max-width:30%;
+}
+
+.img-fluid-li {
+    max-width:50px;
+}
