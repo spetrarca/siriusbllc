@@ -14,7 +14,7 @@
 
     <!--nav bar start-->
     <nav class="navbar sticky-top navbar-dark navbar-expand-lg"
-        style="z-index: 1000; background-color:#000000; color:white">
+        style="z-index: 1000; background-color:black; color:white">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SB,LLC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ms.php">Managed Services</a>
@@ -73,39 +73,35 @@
 
     <!--main page content goes here-->
 
+
+    <?php
+    /*
+    //get database connection config
+    require_once('./config/config.php');
+    // Establishes the connection
+    $conn = sqlsrv_connect($databaseConfig['serverName'], array(
+        'Database' => $databaseConfig['database'],
+        'Uid' => $databaseConfig['username'],
+        'PWD' => $databaseConfig['password'],
+    )
+    );
+
+
+    // Close the connection
+    sqlsrv_close($conn);
+    */
+    ?>
+
+
     <div class="container-fluid">
-        <div class="row" style="color:white;">
-            <div class="col-4"></div>
-            <div class="col-4 text-center">
-                <?php
-
-                //get database connection config
-                
-                require_once('./config/config.php');
-                // Establishes the connection
-                $conn = sqlsrv_connect(
-                    $databaseConfig['serverName'],
-                    array(
-                        'Database' => $databaseConfig['database'],
-                        'Uid' => $databaseConfig['username'],
-                        'PWD' => $databaseConfig['password'],
-                    )
-                );
-
-                // Check the connection
-                if ($conn) {
-                    echo "Connected successfully";
-                } else {
-                    echo "Connection failed: ";
-                    print_r(sqlsrv_errors());
-                }
-
-                // Close the connection
-                sqlsrv_close($conn);
-
-                ?>
-            </div>
-            <div class="col-4"></div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col text-center"><iframe width="1080px" height="480px"
+                    src="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=2QTiWiHezEW6wCJtQVVj6zspwYmfCzlHu7MeeE-0IpBURjJCS0VKMk4yNkhRNTI2TzhIUDg3T0ZOSy4u&embed=true"
+                    frameborder="0" marginwidth="0" marginheight="0"
+                    style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen
+                    mozallowfullscreen msallowfullscreen> </iframe></div>
+            <div class="col-2"></div>
         </div>
     </div>
 
@@ -136,7 +132,8 @@
         </div>
         <div class="row">
             <div class="col align-self-center text-center">
-                <p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are the
+                <p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are
+                    the
                     property of their respective owners.</p>
             </div>
         </div>

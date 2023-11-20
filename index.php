@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="./assets/customcss/mycss.css" />
 </head>
 
-<body>
+<body style="background-color:#200d2a;">
 
     <!--nav bar start-->
     <nav class="navbar sticky-top navbar-dark navbar-expand-lg"
-        style="z-index: 1000; background-color:darkblue; color: white">
+        style="z-index: 1000; background-color:black; color:white">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color: white;" href="#">SB,LLC</a>
+            <a class="navbar-brand" href="#">SB,LLC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -25,33 +25,33 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" style="color:white">Home</a>
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="managed-services.php" style="color:white">Managed Services</a>
+                        <a class="nav-link" href="ms.php">Managed Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service-offerings.php" style="color:white">Service Offerings</a>
+                        <a class="nav-link" href="service-offerings.php">Service Offerings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="uc-offerings.php" style="color:white">Cloud Communications
+                        <a class="nav-link" href="uc-offerings.php">Cloud Communications
                             Offerings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php" style="color:white">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="msa.php" style="color:white">Master Service Agreement</a>
+                        <a class="nav-link" href="msa.php">Master Service Agreement</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" style="color:white">Privacy Policies</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: darkblue;">
-                            <li><a class="dropdown-item custom-hover-style" href="#" style="color:white">Privacy
+                            data-bs-toggle="dropdown" aria-expanded="false" >Privacy Policies</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: slategrey;">
+                            <li><a class="dropdown-item custom-hover-style" href="#" >Privacy
                                     Policy</a></li>
-                            <li><a class="dropdown-item custom-hover-style" href="#" style="color:white">CCPA - Privacy
+                            <li><a class="dropdown-item custom-hover-style" href="#" >CCPA - Privacy
                                     Notice for CA Residents</a></li>
-                            <li><a class="dropdown-item custom-hover-style" href="#" style="color:white">GDPR Privacy
+                            <li><a class="dropdown-item custom-hover-style" href="#" >GDPR Privacy
                                     Request</a></li>
                         </ul>
                     </li>
@@ -72,7 +72,7 @@
     </div>
 
     <!--main page content goes here-->
-    <div class="container-fluid" name="bodyText">
+    <div class="container-fluid" name="bodyText" style="color:#cccccc">
         <div class="row text-center">
             <div class="col">
                 <h2 style="font-weight: bold;">Who We Are</h2>
@@ -139,15 +139,15 @@
 
 
     <!--footer starts here-->
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center" style="color:#cccccc">
         <div class="row">
-            <div class="col"><a href="https://www.oracle.com/communications/"><img
-                        src="./assets/images/oracle-partner-logo.png" alt="" class="img-fluid;"></a>
+            <div class="col-4"><a href="https://www.oracle.com/communications/"><img
+                        src="./assets/images/oracle-partner-logo.png" alt="" class="img-fluid"></a>
             </div>
-            <div class="col"><a href="https://ribboncommunications.com/"><img src="./assets/images/ribbon-black.jpg"
+            <div class="col-4"><a href="https://ribboncommunications.com/"><img src="./assets/images/ribbon-logo.png"
                         alt="" class="img-fluid"></a>
             </div>
-            <div class="col"><a
+            <div class="col-4" style="padding-top: 1%;"><a
                     href="https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-azure"><img
                         src="./assets/images/Partner-Logo-Microsoft-Azure.png" alt="" class="img-fluid"></a>
             </div>
@@ -161,6 +161,12 @@
             <div class="col align-self-center"><a
                     href="https://www.linkedin.com/company/sirius-b-communications-llc/"><img class="img-fluid-li"
                         src="./assets/images/linkedin.png" alt=""></a></div>
+        </div>
+        <div class="row">
+            <div class="col align-self-center text-center"><p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are the property of their respective owners.</p></div>
+        </div>
+        <div class="row">
+            <div class="col align-self-center"><a href="https://www.freepik.com/free-ai-image/view-computer-monitor-display_65161426.htm#query=monitoring%20system&position=45&from_view=keyword&track=ais&uuid=4b310982-9c47-47a7-8a82-162a12d7aea9">Images By freepik</a></div>
         </div>
     </div>
 
