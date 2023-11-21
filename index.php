@@ -45,13 +45,13 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" >Privacy Policies</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000">
-                            <li><a class="dropdown-item custom-hover-style" href="#" style="color:lightgray; background-color: #000000" >Privacy
+                            data-bs-toggle="dropdown" aria-expanded="false">Privacy Policies</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
+                            <li><a class="dropdown-item" href="#" style="color:#888888">Privacy
                                     Policy</a></li>
-                            <li><a class="dropdown-item custom-hover-style" href="#" style="color:lightgray; background-color: #000000">CCPA - Privacy
+                            <li><a class="dropdown-item" href="#" style="color:#888888">CCPA - Privacy
                                     Notice for CA Residents</a></li>
-                            <li><a class="dropdown-item custom-hover-style" href="#" style="color:lightgray; background-color: #000000">GDPR Privacy
+                            <li><a class="dropdown-item" href="#" style="color:#888888">GDPR Privacy
                                     Request</a></li>
                         </ul>
                     </li>
@@ -114,24 +114,27 @@
         </div>
     </div>
     <!--outage alert button-->
-    <div class="container-fluid" name="alertButton"></div>
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col">
-            <button class="btn btn-danger disabled" id="outageAlert">Report System Outage</button>
+
+
+    <div class="container-fluid" name="bodyText" style="color:#cccccc">
+        <div class="row text-center">
+            <div class="col">
+                <div class="col">
+                </div>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <button class="btn btn-danger" id="outageAlert">Report System Outage</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col">
+                </div>
+            </div>
         </div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-    </div>
-    </div>
-
     </div>
 
 
-    
 
 
 
@@ -163,10 +166,15 @@
                         src="./assets/images/linkedin.png" alt=""></a></div>
         </div>
         <div class="row">
-            <div class="col align-self-center text-center"><p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are the property of their respective owners.</p></div>
+            <div class="col align-self-center text-center">
+                <p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are the
+                    property of their respective owners.</p>
+            </div>
         </div>
         <div class="row">
-            <div class="col align-self-center"><a href="https://www.freepik.com/free-ai-image/view-computer-monitor-display_65161426.htm#query=monitoring%20system&position=45&from_view=keyword&track=ais&uuid=4b310982-9c47-47a7-8a82-162a12d7aea9">Images By freepik</a></div>
+            <div class="col align-self-center"><a
+                    href="https://www.freepik.com/free-ai-image/view-computer-monitor-display_65161426.htm#query=monitoring%20system&position=45&from_view=keyword&track=ais&uuid=4b310982-9c47-47a7-8a82-162a12d7aea9">Images
+                    By freepik</a></div>
         </div>
     </div>
 

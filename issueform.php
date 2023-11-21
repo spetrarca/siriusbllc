@@ -47,11 +47,11 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Privacy Policies</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
-                            <li><a class="dropdown-item custom-hover-style" href="#">Privacy
+                            <li><a class="dropdown-item" href="#" style="color:#888888">Privacy
                                     Policy</a></li>
-                            <li><a class="dropdown-item custom-hover-style" href="#">CCPA - Privacy
+                            <li><a class="dropdown-item" href="#" style="color:#888888">CCPA - Privacy
                                     Notice for CA Residents</a></li>
-                            <li><a class="dropdown-item custom-hover-style" href="#">GDPR Privacy
+                            <li><a class="dropdown-item" href="#" style="color:#888888">GDPR Privacy
                                     Request</a></li>
                         </ul>
                     </li>

@@ -14,9 +14,9 @@
 
     <!--nav bar start-->
     <nav class="navbar sticky-top navbar-dark navbar-expand-lg"
-        style="z-index: 1000; background-color:black; color:white">
+        style="z-index: 1000; background-color:#000000; color:white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">SB,LLC</a>
+            <a class="navbar-brand" href="index.php">SB,LLC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Managed Services</a>
+                        <a class="nav-link" href="ms.php">Managed Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="service-offerings.php">Service Offerings</a>
@@ -38,7 +38,7 @@
                             Offerings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link active" href="contact.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="msa.php">Master Service Agreement</a>
@@ -54,7 +54,6 @@
                             <li><a class="dropdown-item" href="#" style="color:#888888">GDPR Privacy
                                     Request</a></li>
                         </ul>
-                    </li>
                     </li>
                 </ul>
             </div>
@@ -74,19 +73,24 @@
 
     <!--main page content goes here-->
 
-
     <div class="container-fluid">
-        <div class="row" style="background-image: url('./assets/images/ms-bg.png'); padding-top: 3%;">
-            <div class="col-4"></div>
-            <div class="col-4 text-center" style="padding-bottom: 3%;"><h2>Managed Services</h2></div>
-            <div class="col-4"></div>
+        <div class="row" style="color:white; padding-top:10px;">
+            <div class="col-4 text-center"></div>
+            <div class="col-4 text-center"><button class="btn btn-danger" id="outageAlert">Report System Outage</button></div>
+            <div class="col-4 text-center"></div>
+        </div>
+        <div class="row" style="color:white; padding-top:10px;">
+            <div class="col-4 text-center"></div>
+            <div class="col-4 text-center"><a href="workrequest.php"><button type="button" class="btn btn-secondary">Request Professional Services</button></a></div>
+            <div class="col-4 text-center"></div>
+        </div>
+        <div class="row" style="color:white; padding-top:10px;">
+            <div class="col-4 text-center"></div>
+            <div class="col-4 text-center"><a href="issueform.php"><button type="button" class="btn btn-warning">Report a Minor Issue</button></a></div>
+            <div class="col-4 text-center"></div>
         </div>
     </div>
 
-
-    <?php
-    
-    ?>
 
     <!--footer starts here-->
     <div class="container-fluid text-center" style="color:#cccccc">
@@ -113,10 +117,15 @@
                         src="./assets/images/linkedin.png" alt=""></a></div>
         </div>
         <div class="row">
-            <div class="col align-self-center text-center"><p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are the property of their respective owners.</p></div>
+            <div class="col align-self-center text-center">
+                <p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are the
+                    property of their respective owners.</p>
+            </div>
         </div>
         <div class="row">
-            <div class="col align-self-center"><a href="https://www.freepik.com/free-ai-image/view-computer-monitor-display_65161426.htm#query=monitoring%20system&position=45&from_view=keyword&track=ais&uuid=4b310982-9c47-47a7-8a82-162a12d7aea9">Images By freepik</a></div>
+            <div class="col align-self-center"><a
+                    href="https://www.freepik.com/free-ai-image/view-computer-monitor-display_65161426.htm#query=monitoring%20system&position=45&from_view=keyword&track=ais&uuid=4b310982-9c47-47a7-8a82-162a12d7aea9">Images
+                    By freepik</a></div>
         </div>
     </div>
 

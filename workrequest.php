@@ -28,7 +28,7 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Managed Services</a>
+                        <a class="nav-link" href="ms.php">Managed Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="service-offerings.php">Service Offerings</a>
@@ -45,7 +45,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" >Privacy Policies</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">Privacy Policies</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
                             <li><a class="dropdown-item" href="#" style="color:#888888">Privacy
                                     Policy</a></li>
@@ -54,7 +54,6 @@
                             <li><a class="dropdown-item" href="#" style="color:#888888">GDPR Privacy
                                     Request</a></li>
                         </ul>
-                    </li>
                     </li>
                 </ul>
             </div>
@@ -75,18 +74,33 @@
     <!--main page content goes here-->
 
 
+    <?php
+    /*
+    //get database connection config
+    require_once('./config/config.php');
+    // Establishes the connection
+    $conn = sqlsrv_connect($databaseConfig['serverName'], array(
+        'Database' => $databaseConfig['database'],
+        'Uid' => $databaseConfig['username'],
+        'PWD' => $databaseConfig['password'],
+    )
+    );
+
+
+    // Close the connection
+    sqlsrv_close($conn);
+    */
+    ?>
+
+
     <div class="container-fluid">
-        <div class="row" style="background-image: url('./assets/images/ms-bg.png'); padding-top: 3%;">
-            <div class="col-4"></div>
-            <div class="col-4 text-center" style="padding-bottom: 3%;"><h2>Managed Services</h2></div>
-            <div class="col-4"></div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col text-center"><iframe width="1080px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=2QTiWiHezEW6wCJtQVVj6zspwYmfCzlHu7MeeE-0IpBURTNNSEpKTzBGVFNGSlkzWVg1UjJGUURBRi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe></div>
+            <div class="col-2"></div>
         </div>
     </div>
 
-
-    <?php
-    
-    ?>
 
     <!--footer starts here-->
     <div class="container-fluid text-center" style="color:#cccccc">
@@ -113,10 +127,16 @@
                         src="./assets/images/linkedin.png" alt=""></a></div>
         </div>
         <div class="row">
-            <div class="col align-self-center text-center"><p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are the property of their respective owners.</p></div>
+            <div class="col align-self-center text-center">
+                <p>&#169;Copyright 2023 Sirius B Communications LLC. All Rights Reserved. All other trademarks are
+                    the
+                    property of their respective owners.</p>
+            </div>
         </div>
         <div class="row">
-            <div class="col align-self-center"><a href="https://www.freepik.com/free-ai-image/view-computer-monitor-display_65161426.htm#query=monitoring%20system&position=45&from_view=keyword&track=ais&uuid=4b310982-9c47-47a7-8a82-162a12d7aea9">Images By freepik</a></div>
+            <div class="col align-self-center"><a
+                    href="https://www.freepik.com/free-ai-image/view-computer-monitor-display_65161426.htm#query=monitoring%20system&position=45&from_view=keyword&track=ais&uuid=4b310982-9c47-47a7-8a82-162a12d7aea9">Images
+                    By freepik</a></div>
         </div>
     </div>
 
