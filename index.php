@@ -47,7 +47,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" >Privacy Policies</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
-                            <li><a class="dropdown-item custom-hover-style" href="#" >Privacy
+                            <li><a class="dropdown-item custom-hover-style" href="#" style="color:#000000" >Privacy
                                     Policy</a></li>
                             <li><a class="dropdown-item custom-hover-style" href="#" >CCPA - Privacy
                                     Notice for CA Residents</a></li>
