@@ -46,7 +46,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" >Privacy Policies</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: slategrey;">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #200d2a;">
                             <li><a class="dropdown-item custom-hover-style" href="#" >Privacy
                                     Policy</a></li>
                             <li><a class="dropdown-item custom-hover-style" href="#" >CCPA - Privacy
