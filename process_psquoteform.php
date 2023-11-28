@@ -45,7 +45,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Privacy Policies</a>
+                            data-bs-toggle="dropdown" aria-expanded="false" >Privacy Policies</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
                             <li><a class="dropdown-item" href="#" style="color:#888888">Privacy
                                     Policy</a></li>
@@ -73,120 +73,67 @@
 
     <!--main page content goes here-->
 
-    <!--customer input form-->
     <div class="container-fluid">
-        <form method="post" action="process_psquoteform.php">
-            <div class="row">
-                <div class="col-4 align-self-center"></div>
-                <div class="col-4 align-self-center">
-                    <label for="companyName" class="form-label" style="color:white;">Company Name</label>
-                    <input type="text" class="form-control" id="companyName" name="companyName">
-                    <label for="contactName" class="form-label" style="color:white;">Your Name</label>
-                    <input type="text" class="form-control" id="contactName" name="contactName">
-                    <label for="serviceLevel" class="form-label" style="color:white">Which Service Level are you interested in?</label>
-                    <select class="form-select" id="serviceLevel" name="serviceLevel">
-                        <option value ="platinum" selected>Platinum</option>
-                        <option value="gold">Gold</option>
-                        <option value="silver">Silver</option>
-                        <option value="bronze">Bronze</option>
-                    </select>
-                    <label for="numDevices" class="form-label" style="color:white;">Number of Devices</label>
-                    <input type="number" class="form-control" id="numDevices" name="numDevices">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                <div class="col-4 align-self-center"></div>
+        <div class="row" style="color:white;">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+            <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    require_once('./config/config_local.php');
+
+    // Function to sanitize input data
+    function sanitizeInput($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    // Establish database connection
+    $conn = sqlsrv_connect(
+        $databaseConfig['serverName'],
+        array(
+            'Database' => $databaseConfig['database'],
+            'Uid' => $databaseConfig['username'],
+            'PWD' => $databaseConfig['password'],
+        )
+    );
+
+    if (!$conn) {
+        echo "Connection failed: ";
+        print_r(sqlsrv_errors());
+    } else {
+        // Sanitize and validate input data
+        $contactName = sanitizeInput($_POST['contactName']);
+        $companyName = sanitizeInput($_POST['companyName']);
+        $serviceLevel = sanitizeInput($_POST['serviceLevel']);
+        $numDevices = intval($_POST['numDevices']); // Ensure it's an integer
+
+        // Validate inputs (add more specific validation as needed)
+        if (empty($contactName) || empty($companyName) || empty($serviceLevel) || $numDevices <= 0) {
+            echo "Please fill in all fields correctly.";
+        } else {
+            // Prepare INSERT statement
+            $sql = "INSERT INTO [Prospects].[Quotes] (contactName, companyName, serviceLevel, numDevices) VALUES (?, ?, ?, ?)";
+            $params = array($contactName, $companyName, $serviceLevel, $numDevices);
+            $stmt = sqlsrv_prepare($conn, $sql, $params);
+
+            if (sqlsrv_execute($stmt)) {
+                echo "Record inserted successfully";
+            } else {
+                echo "Error inserting record: ";
+                print_r(sqlsrv_errors());
+            }
+
+            sqlsrv_free_stmt($stmt);
+            sqlsrv_close($conn);
+        }
+    }
+}
+?>
+
             </div>
-
-
-
-
-        </form>
-    </div>
-
-
-
-    <!--description of services-->
-    <div class="container-fluid" style="max-width: 60%;">
-        <div class="row" style="color:white;">
-            <div class="col" style="font-weight:bold;">Protected Services</div>
-            <div class="col text-center" style="font-weight:bold;">Bronze</div>
-            <div class="col text-center" style="font-weight:bold;">Silver</div>
-            <div class="col text-center" style="font-weight:bold;">Gold</div>
-            <div class="col text-center" style="font-weight:bold;">Platinum</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Backups</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Software Release Review</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Discounted Updates</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Ask-a-Tech</div>
-            <div class="col text-center"></div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">CSI Management (Oracle)</div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center">X</div>
-            <div class="col text-center">X</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Limited MAC's</div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center">X</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Alarm Mitigation</div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center">X</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Your Software Upgrade Costs</div>
-            <div class="col text-center">$1400/Device</div>
-            <div class="col text-center">$1200/Device</div>
-            <div class="col text-center">$1100/Device</div>
-            <div class="col text-center">$1000/Device</div>
-        </div>
-        <div class="row" style="color:white;">
-            <div class="col">Your Monthly Price</div>
-            <div class="col text-center">$500</div>
-            <div class="col text-center">$700</div>
-            <div class="col text-center">$900</div>
-            <div class="col text-center">$1200</div>
-        </div>
-        <div class="row">
-            <div class="col">&nbsp;</div>
-        </div>
-        <div class="row" style="color:white">
-            <div class="col">
-                <p>Non-Managed Service software upgrades are flat rate at $1500/device. Software updates include
-                    configuration, backups, software procurement, staging, pre- and post-upgrade health checks and
-                    testing as well as any customer-required prework and are assumed to be performed out of hours during
-                    a selected maintenance window.</p>
-            </div>
+            <div class="col-4"></div>
         </div>
     </div>
 
