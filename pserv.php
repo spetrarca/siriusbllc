@@ -14,7 +14,7 @@
 
     <!--nav bar start-->
     <nav class="navbar sticky-top navbar-dark navbar-expand-lg"
-        style="z-index: 1000; background-color:black; color:white">
+        style="z-index: 1000; background-color:#000000; color:white">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SB,LLC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -25,10 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Managed Services</a>
+                        <a class="nav-link" href="ms.php">Managed Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="service-offerings.php">Service Offerings</a>
@@ -55,7 +55,6 @@
                                     Request</a></li>
                         </ul>
                     </li>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -74,46 +73,114 @@
 
     <!--main page content goes here-->
 
-    <div class="container-fluid text-center">
-        <div class="row" style="background-image:url(./assets/images/stars.jpg); min-height: 120px;"><div class="col"><h2 style="color:#cccccc"><br />Managed Services</h2></div></div>
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-3">
-                <div class="card" style="background-color:#3E1951; color:#cccccc;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight: bold;">Protected Services</h5>
-                        <p class="card-text">For those companies with limited resources to manage some of the more
-                            tedious maintenance tasks like backups and software release management. With a protected
-                            service plan, you also get discounted updates if you choose to update when an update is
-                            published.</p>
-                        <a href="pserv.php" class="btn btn-success">Request a Quote</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="background-color:#3E1951; color:#cccccc;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight: bold;">Secured Services</h5>
-                        <p class="card-text">Tier II remote tech-support prepaid for when you need an extra set of hands
-                            to help augment your team or need aid in trouble shooting. Pre-paid hours at a discount for
-                            the peace of mind that you have the expertise available to you when you need it.</p>
-                        <a href="sserv.php" class="btn btn-success">Request a Quote</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!--customer input form-->
     <div class="container-fluid">
+    <form>
         <div class="row">
-
+        <div class="col-4 align-self-center"></div>
+        <div class="col-4 align-self-center">
+            <label for="companyName" class="form-label" style="color:white;">Company Name</label>
+            <input type="text" class="form-control" id="companyName">
+            <label for="contactName" class="form-label" style="color:white;">Your Name</label>
+            <input type="text" class="form-control" id="contactName">
+            <label for="serviceLevel" class="form-label" style="color:white"></label>
         </div>
+        <div class="col-4 align-self-center"></div>
+        </div>
+
+
+
+
+    </form>
     </div>
 
 
-    <?php
 
-    ?>
+    <!--description of services-->
+    <div class="container-fluid" style="max-width: 60%;">
+        <div class="row" style="color:white;">
+            <div class="col" style="font-weight:bold;">Protected Services</div>
+            <div class="col text-center" style="font-weight:bold;">Bronze</div>
+            <div class="col text-center" style="font-weight:bold;">Silver</div>
+            <div class="col text-center" style="font-weight:bold;">Gold</div>
+            <div class="col text-center" style="font-weight:bold;">Platinum</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Backups</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Software Release Review</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Discounted Updates</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Ask-a-Tech</div>
+            <div class="col text-center"></div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">CSI Management (Oracle)</div>
+            <div class="col text-center"></div>
+            <div class="col text-center"></div>
+            <div class="col text-center">X</div>
+            <div class="col text-center">X</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Limited MAC's</div>
+            <div class="col text-center"></div>
+            <div class="col text-center"></div>
+            <div class="col text-center"></div>
+            <div class="col text-center">X</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Alarm Mitigation</div>
+            <div class="col text-center"></div>
+            <div class="col text-center"></div>
+            <div class="col text-center"></div>
+            <div class="col text-center">X</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Your Software Upgrade Costs</div>
+            <div class="col text-center">$1400/Device</div>
+            <div class="col text-center">$1200/Device</div>
+            <div class="col text-center">$1100/Device</div>
+            <div class="col text-center">$1000/Device</div>
+        </div>
+        <div class="row" style="color:white;">
+            <div class="col">Your Monthly Price</div>
+            <div class="col text-center">$500</div>
+            <div class="col text-center">$700</div>
+            <div class="col text-center">$900</div>
+            <div class="col text-center">$1200</div>
+        </div>
+        <div class="row">
+            <div class="col">&nbsp;</div>
+        </div>
+        <div class="row" style="color:white">
+            <div class="col">
+                <p>Non-Managed Service software upgrades are flat rate at $1500/device. Software updates include
+                    configuration, backups, software procurement, staging, pre- and post-upgrade health checks and
+                    testing as well as any customer-required prework and are assumed to be performed out of hours during
+                    a selected maintenance window.</p>
+            </div>
+        </div>
+    </div>
+
 
     <!--footer starts here-->
     <div class="container-fluid text-center" style="color:#cccccc">
