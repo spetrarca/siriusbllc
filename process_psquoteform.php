@@ -81,7 +81,6 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once('./config/config_local.php');
 
-    // Function to sanitize input data
     function sanitizeInput($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -89,7 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return $data;
     }
 
-    // Establish database connection
     $conn = sqlsrv_connect(
         $databaseConfig['serverName'],
         array(
@@ -103,34 +101,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Connection failed: ";
         print_r(sqlsrv_errors());
     } else {
-        // Sanitize and validate input data
         $contactName = sanitizeInput($_POST['contactName']);
         $companyName = sanitizeInput($_POST['companyName']);
+        $email = sanitizeInput($_POST['email']);
         $serviceLevel = sanitizeInput($_POST['serviceLevel']);
-        $numDevices = intval($_POST['numDevices']); // Ensure it's an integer
+        $numDevices = intval($_POST['numDevices']); 
 
-        // Validate inputs (add more specific validation as needed)
-        if (empty($contactName) || empty($companyName) || empty($serviceLevel) || $numDevices <= 0) {
+        if (empty($contactName) || empty($companyName) || empty($email) || empty($serviceLevel) || $numDevices <= 0) {
             echo "Please fill in all fields correctly.";
         } else {
-            // Prepare INSERT statement
-            $sql = "INSERT INTO [Prospects].[Quotes] (contactName, companyName, serviceLevel, numDevices) VALUES (?, ?, ?, ?)";
-            $params = array($contactName, $companyName, $serviceLevel, $numDevices);
-            $stmt = sqlsrv_prepare($conn, $sql, $params);
-
-            if (sqlsrv_execute($stmt)) {
-                echo "Record inserted successfully";
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                echo "Invalid email format.";
             } else {
-                echo "Error inserting record: ";
-                print_r(sqlsrv_errors());
-            }
+                $sql = "INSERT INTO [Prospects].[Quotes] (contactName, companyName, contactEmail, serviceLevel, numDevices) VALUES (?, ?, ?, ?, ?)";
+                $params = array($contactName, $companyName, $email, $serviceLevel, $numDevices);
+                $stmt = sqlsrv_prepare($conn, $sql, $params);
 
-            sqlsrv_free_stmt($stmt);
-            sqlsrv_close($conn);
+                if (sqlsrv_execute($stmt)) {
+                    echo "Record inserted successfully";
+                } else {
+                    echo "Error inserting record: ";
+                    print_r(sqlsrv_errors());
+                }
+
+                sqlsrv_free_stmt($stmt);
+                sqlsrv_close($conn);
+            }
         }
     }
 }
 ?>
+
 
             </div>
             <div class="col-4"></div>

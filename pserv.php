@@ -83,6 +83,8 @@
                     <input type="text" class="form-control" id="companyName" name="companyName">
                     <label for="contactName" class="form-label" style="color:white;">Your Name</label>
                     <input type="text" class="form-control" id="contactName" name="contactName">
+                    <label for="email" class="form-label" style="color:white;">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email">
                     <label for="serviceLevel" class="form-label" style="color:white">Which Service Level are you interested in?</label>
                     <select class="form-select" id="serviceLevel" name="serviceLevel">
                         <option value ="platinum" selected>Platinum</option>
