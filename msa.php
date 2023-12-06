@@ -38,14 +38,14 @@
                             Offerings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="msa.php">Master Service Agreement</a>
+                        <a class="nav-link active" href="#">Master Service Agreement</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navBarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Privacy Policies</a>
+                            data-bs-toggle="dropdown" aria-expanded="false" >Privacy Policies</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
                             <li><a class="dropdown-item" href="#" style="color:#888888">Privacy
                                     Policy</a></li>
@@ -74,70 +74,12 @@
     <!--main page content goes here-->
 
     <div class="container-fluid">
-        <div class="row" style="color:white; padding-top:10px;">
-            <div class="col-4 text-center"></div>
-            <div class="col-4 text-center"><button class="btn btn-danger" id="outageAlert">Report System Outage</button>
-            </div>
-            <div class="col-4 text-center"></div>
-        </div>
-        <div class="row" style="color:white; padding-top:10px;">
-            <div class="col-4 text-center"></div>
-            <div class="col-4 text-center"><a href="workrequest.php"><button type="button"
-                        class="btn btn-secondary">Request Professional Services</button></a></div>
-            <div class="col-4 text-center"></div>
-        </div>
-        <div class="row" style="color:white; padding-top:10px;">
-            <div class="col-4 text-center"></div>
-            <div class="col-4 text-center"><a href="issueform.php"><button type="button" class="btn btn-warning">Report
-                        a Minor Issue</button></a></div>
-            <div class="col-4 text-center"></div>
-        </div>
-    </div>
-    <br />
-    <br />
-
-    <div class="container-fluid">
-        <div class="row" style="color:white">
+        <div class="row" style="color:white;">
+        <div class="col-3"></div>
             <div class="col text-center">
-                <h3>Meet the team!</h3>
+                <object data="./assets/MSA-Sirius-B-Communications-LLC.pdf" type="application/pdf" width="100%" height="800px"></object>               
             </div>
-        </div>
-        <!--headshots-->
-        <div class="row" style="color:#ffffff">
-            <div class="col-2"></div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/mjeff.png" alt="" style="max-height:125px">
-            </div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/blong.png" alt="" style="max-height:125px">
-            </div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/mbail.jpg" alt="" style="max-height:125px">
-            </div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/spetrarca.jpg" alt="" style="max-height:125px">
-            </div>
-        </div>
-
-        <!--roles-->
-        <div class="row" style="color:#ffffff">
-            <div class="col-2"></div>
-            <div class="col-2 text-center">
-                Mike Jeffrey <br /> Chief Executive Officer <br /> <a href="mailto:mjeffrey@siriusbllc.com"
-                    style="color:antiquewhite">mjeffrey@siriusbllc.com</a>
-            </div>
-            <div class="col-2 text-center">
-                Bill Long <br /> Chief Technology Officer <br /> <a href="mailto:blong@siriusbllc.com"
-                    style="color:antiquewhite">blong@siriusbllc.com</a>
-            </div>
-            <div class="col-2 text-center">
-                Mike Jeffrey <br /> NOC Manager <br /> <a href="mailto:mbail@siriusbllc.com"
-                    style="color:antiquewhite">mbail@siriusbllc.com</a>
-            </div>
-            <div class="col-2 text-center">
-                Sal Petrarca <br /> Azure DevOps <br /> <a href="mailto:mjeffrey@siriusbllc.com"
-                    style="color:antiquewhite">mjeffrey@siriusbllc.com</a>
-            </div>
+        <div class="col-3"></div>
         </div>
     </div>
 

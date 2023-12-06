@@ -16,7 +16,7 @@
     <nav class="navbar sticky-top navbar-dark navbar-expand-lg"
         style="z-index: 1000; background-color:#000000; color:white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">SB,LLC</a>
+            <a class="navbar-brand" href="#">SB,LLC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -25,20 +25,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ms.php">Managed Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service-offerings.php">Service Offerings</a>
+                        <a class="nav-link active" href="service-offerings.php">Service Offerings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="uc-offerings.php">Cloud Communications
                             Offerings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="msa.php">Master Service Agreement</a>
@@ -74,70 +74,39 @@
     <!--main page content goes here-->
 
     <div class="container-fluid">
-        <div class="row" style="color:white; padding-top:10px;">
-            <div class="col-4 text-center"></div>
-            <div class="col-4 text-center"><button class="btn btn-danger" id="outageAlert">Report System Outage</button>
+        <div class="row" style="color:white;">
+            <div class="col-3 text center"></div>
+            <div class="col">
+                <h5>Support Service</h5>
+                <p>Sirius B offers regular support services with the following SLOs (Service Level Objectives) during
+                    regular business hours (M--F 8 am to 5 pm ET ). All non-project, out of hours support work requires
+                    the outage form filled out. Please use the link below for all <b style="color:red" >NON-P1</b> requests.</p>
+                <ul>
+                    <li>P1 or critical outages requires the outage support form and expedite fee ($500 USD).</li>
+                    <li>P2 resolution is 12 hours.</li>
+                    <li>P3 resolution is 24 hours.</li>
+                    <li>P4 resolution is 2 business days (M-F).</li>
+                </ul>
+                <a href="issueform.php" style="color:antiquewhite">Report an Issue</a>
+                <br />
+                <br />
+                <br />
             </div>
-            <div class="col-4 text-center"></div>
-        </div>
-        <div class="row" style="color:white; padding-top:10px;">
-            <div class="col-4 text-center"></div>
-            <div class="col-4 text-center"><a href="workrequest.php"><button type="button"
-                        class="btn btn-secondary">Request Professional Services</button></a></div>
-            <div class="col-4 text-center"></div>
-        </div>
-        <div class="row" style="color:white; padding-top:10px;">
-            <div class="col-4 text-center"></div>
-            <div class="col-4 text-center"><a href="issueform.php"><button type="button" class="btn btn-warning">Report
-                        a Minor Issue</button></a></div>
-            <div class="col-4 text-center"></div>
+            <div class="col-3"></div>
         </div>
     </div>
-    <br />
-    <br />
 
     <div class="container-fluid">
-        <div class="row" style="color:white">
-            <div class="col text-center">
-                <h3>Meet the team!</h3>
+        <div class="row" style="color:white;">
+            <div class="col-3 text center"></div>
+            <div class="col">
+                <h5>Project Support and Consulting</h5>
+                <p>Sirius B installs a wide variety of Oracle products from Session Border Controllers to Enterprise
+                    Operations Monitor along with Ribbon Communications Products. Please use the link below to contact
+                    one of our project managers.</p>
+                <a href="workrequest.php" style="color:antiquewhite">Project Request Form</a>
             </div>
-        </div>
-        <!--headshots-->
-        <div class="row" style="color:#ffffff">
-            <div class="col-2"></div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/mjeff.png" alt="" style="max-height:125px">
-            </div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/blong.png" alt="" style="max-height:125px">
-            </div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/mbail.jpg" alt="" style="max-height:125px">
-            </div>
-            <div class="col-2 text-center">
-                <img src="./assets/images/spetrarca.jpg" alt="" style="max-height:125px">
-            </div>
-        </div>
-
-        <!--roles-->
-        <div class="row" style="color:#ffffff">
-            <div class="col-2"></div>
-            <div class="col-2 text-center">
-                Mike Jeffrey <br /> Chief Executive Officer <br /> <a href="mailto:mjeffrey@siriusbllc.com"
-                    style="color:antiquewhite">mjeffrey@siriusbllc.com</a>
-            </div>
-            <div class="col-2 text-center">
-                Bill Long <br /> Chief Technology Officer <br /> <a href="mailto:blong@siriusbllc.com"
-                    style="color:antiquewhite">blong@siriusbllc.com</a>
-            </div>
-            <div class="col-2 text-center">
-                Mike Jeffrey <br /> NOC Manager <br /> <a href="mailto:mbail@siriusbllc.com"
-                    style="color:antiquewhite">mbail@siriusbllc.com</a>
-            </div>
-            <div class="col-2 text-center">
-                Sal Petrarca <br /> Azure DevOps <br /> <a href="mailto:mjeffrey@siriusbllc.com"
-                    style="color:antiquewhite">mjeffrey@siriusbllc.com</a>
-            </div>
+            <div class="col-3"></div>
         </div>
     </div>
 

@@ -93,8 +93,8 @@
                         in the cloud and on-premise including Software Release Management (SRM) audits, routine backups,
                         remote technical support available a la carté or as part of a Sirius B Protected or Secured
                         Services plan.
-                        Sirius B also offers Azure data services including database migrations, reporting, ETL
-                        maintenance and creation, and analysis work.
+                        Sirius B also offers Azure cloud services including migrations from on-prem enterprise voice solutions
+                        to cloud-based solutions hosted in MS Azure's cloud architecture.
                     </p>
                 </div>
             </div>
